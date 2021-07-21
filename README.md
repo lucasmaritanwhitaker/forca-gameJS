@@ -1,2 +1,2 @@
 # forca-gameJS
- Jogo Da Forca
+ Jogo Da Forca Js

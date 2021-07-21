@@ -1,0 +1,22 @@
+.inputTipo{
+    width: 230px;
+    height: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btnEnviar{
+    height: 30px;
+    width: 80px;
+    font-size: 16px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin: 8px;
+    border: 2px solid black;
+} .btnEnviar:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.8s;
+}

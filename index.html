@@ -10,12 +10,12 @@
 
 <body>
     <form>
-        <input type="text" class="inputTipo" id="palavraEscolhida" placeholder="DIGITE A PALAVRA DESEJADA">
-        <input type="submit" class="btnEnviar" id="valorEscolhido" value="Enviar">
+        <input type="text" class="typeInput" id="chosenWordInput" placeholder="DIGITE A PALAVRA DESEJADA">
+        <input type="submit" class="btnSend" id="valorEscolhido" onclick="chosenWord();">
     </form>
     <form>
-        <input type="text" class="inputTipo" id="letraEscolhida" placeholder="DIGITE UMA LETRA">
-        <input type="submit" class="btnEnviar" id="letraResult" value="Enviar">
+        <input type="text" class="typeInput" id="letraEscolhida" placeholder="DIGITE UMA LETRA">
+        <input type="submit" class="btnSend" id="letraResult" onclick="letraEscolhida();">
     </form>
 
     <div id="board"></div>

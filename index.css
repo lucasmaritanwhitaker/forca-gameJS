@@ -48,3 +48,10 @@
     margin: 8px;
     border: 2px solid black;
 }
+
+.colunasLetrasInicial{
+    visibility: hidden;
+}
+.colunaLetrasFinal{
+    visibility: visible;
+}

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container" id="jogo">
+    <div class="container">
         <div class="col-12">
             <h1>FORCA</h1>
         </div>
@@ -22,12 +22,20 @@
                     <button type="submit" class="comeceOJogo" id="comecaOJogo">COMEÇAR</button>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div>
-                    <input type="text" class="typeInput" id="letraE" placeholder="DIGITE UMA LETRA" maxlength="1">
-                    <input type="submit" class="btnSend" id="letraV">
+            <div class="col-md-6 colunasLetrasInicial" id="colunasLetras">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" class="typeInput" id="letraE" placeholder="DIGITE UMA LETRA" maxlength="1">
+                        <input type="submit" class="btnSend" id="letraV">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="jogo"></div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
 

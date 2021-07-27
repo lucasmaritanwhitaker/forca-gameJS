@@ -2,12 +2,11 @@ const oJogo = document.getElementById('comecaOJogo')
 const jogo = document.getElementById('jogo')
 const palavra = document.getElementById('palavraV');
 const letra = document.getElementById('letraV');
+const imgS = document.getElementById('jogoImg');
 let fimDeJogo = false;
 let contador;
 let acertou = 0;
 let errouFinal = 0;
-
-
 
 oJogo.addEventListener('click', function (e) {
     e.preventDefault();
@@ -42,19 +41,33 @@ oJogo.addEventListener('click', function (e) {
             } else if (letraEsc != arrPalavra[k]) {
                 errou += 1
             }
-
         }
+
         if (errou === arrPalavra.length) {
             errouFinal += 1
         }
 
-
+        if (errouFinal == 1) {
+            imgS.setAttribute('src', 'img/erro1.png')
+        } if (errouFinal == 2) {
+            imgS.setAttribute('src', 'img/erro2.png')
+        } if (errouFinal == 3) {
+            imgS.setAttribute('src', 'img/erro3.png')
+        } if (errouFinal == 4) {
+            imgS.setAttribute('src', 'img/erro4.png')
+        } if (errouFinal == 5) {
+            imgS.setAttribute('src', 'img/erro5.png')
+        } if (errouFinal == 6) {
+            imgS.setAttribute('src', 'img/erro6.png')
+        } if (errouFinal == 7) {
+            imgS.setAttribute('src', 'img/erro7.png')
+        }
 
         if (errouFinal >= 7) {
-            alert("voce é burro ?")
+            confirm(`Você PERDEU !!!`)
         }
         if (acertou === arrPalavra.length) {
-            alert("ganhou")
+            confirm(`Você GANHOU !!!`)
         }
     })
 

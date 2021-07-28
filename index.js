@@ -3,7 +3,6 @@ const jogo = document.getElementById('jogo')
 const palavra = document.getElementById('palavraV');
 const letra = document.getElementById('letraV');
 const imgS = document.getElementById('jogoImg');
-let fimDeJogo = false;
 let contador;
 let acertou = 0;
 let errouFinal = 0;
@@ -14,7 +13,10 @@ oJogo.addEventListener('click', function (e) {
     document.getElementById('colunasLetras').classList.toggle('colunaLetrasFinal');
 
     let palavraEsc = document.getElementById('palavraE').value;
-    let arrPalavra = palavraEsc.split('');
+    let arrPalavra = palavraEsc.split('')
+    let numeroLetras = arrPalavra.length;
+
+    document.getElementById('numLetas').innerHTML = `Nº DE LETRAS : ${numeroLetras}`
     document.getElementById('palavraE').value = '';
 
     for (let i = 0; i < arrPalavra.length; i++) {
@@ -59,16 +61,23 @@ oJogo.addEventListener('click', function (e) {
             imgS.setAttribute('src', 'img/erro5.png')
         } if (errouFinal == 6) {
             imgS.setAttribute('src', 'img/erro6.png')
-        } if (errouFinal == 7) {
+        }
+        if (errouFinal == 7) {
             imgS.setAttribute('src', 'img/erro7.png')
         }
 
-        if (errouFinal >= 7) {
-            confirm(`Você PERDEU !!!`)
+        if ((errouFinal === 7)) {
+            confirm('VOCÊ PERDEU !!!')
+            document.getElementById('btn-Reset').classList.toggle('btnResetarF')
         }
         if (acertou === arrPalavra.length) {
-            confirm(`Você GANHOU !!!`)
+            alert(`Você GANHOU !!!`)
         }
-    })
 
+
+    })
 })
+
+function resetar() {
+    location.reload();
+}

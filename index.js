@@ -39,6 +39,10 @@ oJogo.addEventListener('click', function (e) {
         for (let k = 0; k < arrPalavra.length; k++) {
             if (letraEsc === arrPalavra[k]) {
                 document.getElementById('letra' + k).classList.toggle('letraPalavraVisivel')
+                let index = arrPalavra.indexOf(k);
+                arrPalavra.splice(index, 2)
+                console.log(arrPalavra);
+
                 acertou += 1
             } else if (letraEsc != arrPalavra[k]) {
                 errou += 1
@@ -61,17 +65,17 @@ oJogo.addEventListener('click', function (e) {
             imgS.setAttribute('src', 'img/erro5.png')
         } if (errouFinal == 6) {
             imgS.setAttribute('src', 'img/erro6.png')
-        }
-        if (errouFinal == 7) {
+        } if (errouFinal == 7) {
             imgS.setAttribute('src', 'img/erro7.png')
         }
 
         if ((errouFinal === 7)) {
             confirm('VOCÊ PERDEU !!!')
-            document.getElementById('btn-Reset').classList.toggle('btnResetarF')
+            document.getElementById('btnReset').classList.toggle('btnResetarF')
         }
         if (acertou === arrPalavra.length) {
             alert(`Você GANHOU !!!`)
+            document.getElementById('btnReset').classList.toggle('btnResetarF')
         }
 
 
